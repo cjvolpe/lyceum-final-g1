@@ -3,7 +3,7 @@ import {Flashcard,Process,Task} from "../../frontend/src/lib/types.js"
 export class Database {
     private flashcards: Flashcard[] = [];
 
-    async getNextCard(current: number):Promise<Process<Task>> {
+    export async getNextCard(current: number):Promise<Process<Task>> {
         if(current+1< this.flashcards.length){
             const nextCard = this.flashcards[current+1];
             return {success: true, data: nextCard};
@@ -12,7 +12,7 @@ export class Database {
 
     }
 
-    async addFlashcard(card: Flashcard):Promise<Task>{
+    export async addFlashcard(card: Flashcard):Promise<Task>{
         // OPTIONAL ERROR CHECK HERE
         // if(!card) {
         //     return {success: false, error: 400}
@@ -21,7 +21,7 @@ export class Database {
         return {success: true};
     }
 
-    async flipFlashcard(card: Flashcard): String {
+    export async flipFlashcard(card: Flashcard): String {
         // OPTIONAL ERROR CHECK HERE
         // if(!card) {
         //     return {success: false, error: 400}
