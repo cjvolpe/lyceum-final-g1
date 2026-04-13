@@ -1,6 +1,8 @@
 export interface Flashcard {
     term: string;
     definition: string;
+    // ADDED THIS BOOLEAN TO SWAP CARD AND TO SEE WHAT SIDE IS REVEALED
+    definitionRevealed: boolean;
 }
 
 export interface Success<T> {
