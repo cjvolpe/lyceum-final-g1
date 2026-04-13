@@ -7,5 +7,6 @@ import type { FastifyInstance } from "fastify";
 
 
 export function setupRoutes(server: FastifyInstance) {
-
+    server.get<()>{};
+    server.post<()>{};
 }
